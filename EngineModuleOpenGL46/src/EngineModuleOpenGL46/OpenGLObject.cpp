@@ -49,7 +49,7 @@ bool OpenGLObject::Init()
     this->Register(SCROLL_CALLBACK, (int)&scroll_callback);
 
     glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-    glfwSetWindowPos(m_window, 0, 1150);
+    glfwSetWindowPos(m_window, 0, 25);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
