@@ -45,60 +45,6 @@ RenderSystem::~RenderSystem()
     m_quad = nullptr;
 }
 
-/*
-void* n1() { return (void*)new GeometryBuffer(); }
-void* n2() { return (void*)0; }
-void* n3() { return (void*)0; }
-void* n4() { return (void*)0; }
-//
-// Function: RenderSystem::Init
-// Function will initialise 1 object for each recipe component of each subsystem.
-// If a different subsystem uses the same component and it is already initialised,
-// then it wont be created. While we loop over each subsystem, we then request that
-// the subsystem being processed initalises and exiting if it fails.
-//
-// Debug notes 
-//
-//to debug lamda in for loop replace f found from the object creator map with this:
-//std::function<void*()> f = []() {return(void*)new GeometryBuffer(); };
-//
-//To move or delay object creation, use: std::function<void* ()> func = f.second;
-// and then call f: f() later.
-//
-//Development notes
-//
-//
-//build render pass vector
-//ordered vector of susbsystems to execute
-//
-//the renderchain has to be hardcoded and the meaning of each
-// framebuffer ID has to be defined as we need a way to refer to it
-// meaningfully a render implmentation procedure.
-//
-//we initialize framebuffer in a context in which we maintain is purpose with
-//respect to a RenderMethodology
-//
-//A render methodology
-//
-// we will be creating pointers that represent components in a way that gives them a contextual 
-// place in the overall rendersystem across render subsystems
-//
-// each subsystem instance will be placed in order in m_renderPassVector
-//
-//vector<SubSystem*> m_renderPassVector;
-//
-// as a note many instances of the same class of subsystem may be created and used in various places in 
-// the render pass vector or even 
-//
-//
-//
-//There can be components that are for data that are observed by 
-//different subsystems
-//for example, exclude shadow map related buffers from being used in a post processing path
-// if there were not any lights in range on this pass
-//
-//
-*/
 
 bool RenderSystem::Init(const RenderConfiguration& config)
 {
